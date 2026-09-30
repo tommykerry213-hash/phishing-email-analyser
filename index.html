@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phishing Email Analyser | SOC Tool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;background:#0f172a;color:#fff;padding:20px;max-width:800px;margin:auto}
+.card{background:#1e293b;padding:20px;border-radius:12px;margin-top:20px}
+.badge{padding:6px 12px;border-radius:20px;font-weight:bold}
+.clean{background:#16a34a}.susp{background:#eab308;color:#000}.phish{background:#dc2626}
+.flag{background:#334155;padding:8px;border-radius:6px;margin:6px 0;font-size:14px}
+button{background:#3b82f6;color:#fff;border:0;padding:12px 20px;border-radius:8px;cursor:pointer;width:100%;font-size:16px;margin-top:10px}
+textarea{width:100%;height:150px;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:8px;padding:10px}
+</style>
+</head>
+<body>
+<h1>🛡️ Phishing Email Analyser</h1>
+<p>SOC Analyst Tool - Header forensics + URL + BEC detection. 100% private.</p>
+<div class="card">
+<input type="file" id="emlFile" accept=".eml,.txt" style="width:100%">
+<textarea id="pasteBox" placeholder="Or paste raw email headers + body here..."></textarea>
+<button onclick="analyse()">Analyse Email</button>
+</div>
+<div id="result" class="card" style="display:none"></div>
+<script src="analyser.js"></script>
+</body>
+</html>
